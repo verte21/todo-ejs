@@ -1,0 +1,20 @@
+<form method="POST" autocomplete="off" >
+    <label for="exampleInputEmail1">Nazwa zadania</label>
+    <input type="text" 
+        name="taskName"
+        class="form-control" 
+        id="exampleInputEmail1" 
+        aria-describedby="task-name"
+        <% if(typeof task !== 'undefined'){ %> 
+          value="<%- task.title %>"
+        <% } %> 
+        />
+
+    <label>Opis zadania</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name='taskDescription' 
+    <% if(typeof task !== 'undefined'){ %> 
+        value="<%- task.description %>"
+     <% } %> 
+    />   
+  <button type="submit" class="btn btn-primary mt-2"> <%= buttonText  %> </button>
+</form>

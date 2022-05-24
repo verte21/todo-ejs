@@ -1,0 +1,9 @@
+<h1>Nowe zadanie</h1>
+
+<%- include('taskPartials/form', {buttonText: 'Dodaj' }) %>
+
+    <% if (errors) { %>
+        <div class="card alert-danger">
+            Cos poszlo nie tak
+        </div>
+        <% } %>
